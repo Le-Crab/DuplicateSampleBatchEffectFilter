@@ -1,11 +1,11 @@
-# Code accompanying: [Paper Title]
+#  Mitigating batch effects in multicenter whole genome sequencing with duplicate samples and machine learning
 
 [![DOI](https://zenodo.org/badge/DOI/ZENODO_DOI_HERE.svg)](https://doi.org/ZENODO_DOI_HERE)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
-This repository contains the analysis code used in **[Paper Title]** ([journal link/DOI once available]). The paper presents a proof-of-concept approach of WGS data QC utilizing paired samples and machine learning. This repository is intended to document and accompany the methods described in the paper, and is **not** a bioinformatics tool itself.
+This repository contains the analysis code used in **Mitigating batch effects in multicenter whole genome sequencing with duplicate samples and machine learning** ([journal link/DOI once available]). The paper presents a proof-of-concept approach of WGS data QC utilizing duplicate samples and machine learning. This repository is intended to document and accompany the methods described in the paper, and is **not** a bioinformatics tool itself.
 
 Due to the use of both publicly accessible and private WGS datasets, full end-to-end reproducibility is not possible. See the [Data Availability](#data-availability) section for details.
 
@@ -112,15 +112,14 @@ The workflow has the same structure, input data, and script order as Sample-base
 Execute scripts within each workflow in numerical order. For example, for Loci-based stratgy:
 
 ```bash
+# execuion of steps one by one
 cd LociBased/scripts
  ./01_preprocess.py 
- ./02_train.py # execuion of steps one by one
+ ./02_train.py 
 
 # run full workflow 
-# requires mock validation data and configuration of 00_orchestration.py
 cd LociBased/scripts
  ./00_orchestration.py 
-
 ```
 > **Note:**
 Workflow steps after training the ML model require private data and cannot be fully executed without it. The scripts are included to fully document the methods described in the paper. For assistance in adapting the workflow to fit custom data, please contact the authors.
