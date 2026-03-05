@@ -45,6 +45,7 @@ DuplicateSampleBatchEffectFilter/
 - PLINK v1.90b6.21 64-bit (19 Oct 2020)
 - PLINK v2.00a4.4LM AVX2 Intel (21 Jun 2023) 
 - flashpca 2.0
+- git lfs
 - __Python__ 3.13.7
     - pandas 2.3.2
     - numpy 2.3.2
@@ -108,18 +109,24 @@ The workflow has the same structure, input data, and script order as Sample-base
 ---
 
 ## Running the Code
-
+Clone repository and get the input data.
+```bash
+git clone https://github.com/Le-Crab/DuplicateSampleBatchEffectFilter
+cd DuplicateSampleBatchEffectFilter
+git lfs install
+git lfs pull # get example subset of input data to run the workflows
+```
 Execute scripts within each workflow in numerical order. For example, for Loci-based stratgy:
 
 ```bash
 # execuion of steps one by one
 cd LociBased/scripts
- ./01_preprocess.py 
- ./02_train.py 
+python 01_prepare_training_data.py
+python 02_train_xgb_classifier.py 
 
 # run full workflow 
 cd LociBased/scripts
- ./00_orchestration.py 
+python 00_orchestration.py
 ```
 > **Note:**
 Workflow steps after training the ML model require private data and cannot be fully executed without it. The scripts are included to fully document the methods described in the paper. For assistance in adapting the workflow to fit custom data, please contact the authors.
@@ -171,6 +178,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Contact
 
-Uladzislau Korzun — crab.cnx@gmial.com
+Uladzislau Korzun — crab.cnx@gmail.com
 
 For questions about the code, please open an [issue](../../issues) in this repository.
