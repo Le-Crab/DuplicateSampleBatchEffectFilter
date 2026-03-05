@@ -169,7 +169,7 @@ def main() -> int:
     WD = Path(__file__).parent.parent
 
     # Input file is an annotated and labeled  vcf export (tab delimited .txt)
-    INPUT_PATH = WD / 'data' / 'pg1kg30x6.bisnv.nocompneighbor2.annot2.simple.txt'
+    INPUT_PATH = WD / 'data' / 'pg1kg30x6.bisnv.nocompneighbor2.annot2.simple_1M.txt'
 
     # Output path
     OUTPUT_PATH = WD / 'data' / (INPUT_PATH.stem + '_mlready.txt')
