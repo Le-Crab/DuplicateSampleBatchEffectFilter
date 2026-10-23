@@ -1,6 +1,5 @@
 #  Mitigating batch effects in multicenter whole genome sequencing with duplicate samples and machine learning
 
-[![DOI](https://zenodo.org/badge/DOI/ZENODO_DOI_HERE.svg)](https://doi.org/ZENODO_DOI_HERE)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
