@@ -156,6 +156,11 @@ dmypy.json
 *.bim
 *.fam
 *.fa
+*.fasta
+*.fasta.fai
+*.fasta.tbi
+*.vcf.gz.tbi
+
 *.fa.gz
 *.fai
 *.bam
